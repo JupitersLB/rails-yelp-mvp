@@ -1,7 +1,9 @@
 <h1 class="pt-5"><%= @restaurant.name %></h1><hr>
 <h3><%= @restaurant.category %></h3>
 <p><%= @restaurant.address %></p>
-<p><%= @restaurant.phone_number %></p>
+<p class="mb-5"><%= @restaurant.phone_number %></p>
+
+<%= render 'reviews/form', restaurant: @restaurant, review: @review %>
 
 <h5 class="mt-5">Reviews!</h5><hr>
 <% @reviews.each do |review| %>
@@ -12,4 +14,14 @@
 
 <% end %>
 
-<%= link_to 'Leave a review', new_restaurant_review_path(@restaurant), class: 'btn btn-light' %>
+  <button class="btn btn-outline-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Add a Review
+  </button>
+  <div class="col">
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+        <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
+      </div>
+    </div>
+  </div>
+</div>

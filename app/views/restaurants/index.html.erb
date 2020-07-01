@@ -1,6 +1,6 @@
 <h1 class="pt-5">Our restaurants</h1><hr>
   <% @restaurants.each do |restaurant| %>
-    <h3> <%= link_to restaurant.name, restaurant_path(restaurant) %> </h3>
+    <h3> <%= link_to restaurant.name, restaurant_path(restaurant), class: 'text-dark' %> </h3>
     <p> <%= restaurant.category %> </p><hr>
   <% end %>
 

@@ -3,8 +3,6 @@
 <p><%= @restaurant.address %></p>
 <p class="mb-5"><%= @restaurant.phone_number %></p>
 
-<%= render 'reviews/form', restaurant: @restaurant, review: @review %>
-
 <h5 class="mt-5">Reviews!</h5><hr>
 <% @reviews.each do |review| %>
   <div class="row justify-content-around">
@@ -14,12 +12,11 @@
 
 <% end %>
 
-  <button class="btn btn-outline-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <button class="btn btn-outline-dark mb-5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
     Add a Review
   </button>
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample1">
-      <div class="card card-body">
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body bg-transparent">
         <%= render 'reviews/form', restaurant: @restaurant, review: @review %>
       </div>
     </div>

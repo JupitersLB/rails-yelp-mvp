@@ -11,18 +11,8 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-fixed-top navbar-light" style="background-color: #e3f2fd;">
-      <div class="container-fluid">
-        <ul class="nav navbar-nav">
-          <li>
-            <%= link_to 'Restaurants', restaurants_path, class: "nav-item nav-link" %>
-          </li>
-          <li>
-            <%= link_to 'Add a Restaurant', new_restaurant_path, class: "nav-item nav-link" %>
-          </li>
-        </ul>
-      </div>
-    </nav>
+
+    <%= render 'layouts/navbar' %>
     <div class="container">
       <div class="row">
         <div class="col text-center">

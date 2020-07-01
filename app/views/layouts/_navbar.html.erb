@@ -1,0 +1,19 @@
+<div class="navbar sticky-top navbar-expand navbar-light bg-dark">
+  <div class="navbar-brand text-light">Yours</div>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Restaurants", restaurants_path, class: "nav-link text-light" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Add a Restaurant", new_restaurant_path, class: "nav-link text-light" %>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" method="post" action="/search">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    </form>
+  </div>
+</div>

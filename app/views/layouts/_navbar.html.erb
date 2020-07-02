@@ -10,8 +10,8 @@
         <%= link_to "Add a Restaurant", new_restaurant_path, class: "nav-link text-light" %>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" method="post" action="/search">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <form class="form-inline my-2 my-lg-0" action="search">
+      <input class="form-control mr-sm-2" type="search" name="q" placeholder="Search">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
       <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
     </form>

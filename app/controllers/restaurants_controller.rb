@@ -22,6 +22,11 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def search
+    @search_keyword = params[:q]
+    @restaurants = Restaurant.where('name LIKE ?', "%#{@search_keyword}%")
+  end
+
   private
 
   def restaurant_params
